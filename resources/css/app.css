@@ -1,0 +1,6 @@
+/* Muat lapisan dasar Tailwind untuk reset gaya bawaan browser. */
+@tailwind base;
+/* Muat komponen Tailwind yang dapat diperluas oleh aplikasi. */
+@tailwind components;
+/* Muat utilitas Tailwind yang dipakai langsung pada markup. */
+@tailwind utilities;

@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+use Illuminate\Foundation\Application;
+use Symfony\Component\Console\Input\ArgvInput;
+
+define('LARAVEL_START', microtime(true));
+
+// Daftarkan autoloader Composer agar kelas aplikasi dan dependensi tersedia.
+require __DIR__.'/vendor/autoload.php';
+
+// Inisialisasi aplikasi lalu jalankan perintah Artisan yang diminta.
+/** @var Application $app */
+$app = require_once __DIR__.'/bootstrap/app.php';
+
+$status = $app->handleCommand(new ArgvInput);
+
+exit($status);
